@@ -9,4 +9,11 @@
 #### Consumer
 1. 获取注册中心：LocateRegistry.getRegistry()
 2. 服务发现：registry.lookup()
-3. 服务调用：**就像调用本地方法一样调用，RMI会传递方法的名称、参数等信息通过注册中心找到对应提供这个方法的Provider，Provider调用后返回结果**。
+3. 服务调用：sayService.say()
+
+#### 原理
+- 就像调用本地方法一样调用，RMI会通过**stub客户端的代理对象，传递接口名、方法名、方法参数等信息**；
+- 这些信息通过**注册中心找到对应提供这个方法的Provider**；
+- 服务端通过**服务端的代理对象Skeleton调用并返回结果**。
+
+![img.png](img.png)
