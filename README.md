@@ -1,7 +1,7 @@
 # RMI
 #### Provider
 1. 暴露服务：UnicastRemoteObject.exportObject()
-2. 创建注册中心：LocateRegistry。createRegistry()
+2. 创建注册中心：LocateRegistry.createRegistry()
 3. 注册服务：registry.rebind()
 
 <br>
